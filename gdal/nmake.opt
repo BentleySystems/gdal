@@ -358,7 +358,7 @@ JPEG12_SUPPORTED = 1
 
 # DWG support using the Open Design Alliance Teigha Libraries
 
-TD_BASE = d:\dev\OSS\gdal\Teigha_vc12_amd64dll
+TD_BASE = $(GDAL_ROOT)\..\Teigha_vc12_amd64dll
 TD_FLAGS = -D_TOOLKIT_IN_DLL_
 #TD_INCLUDE = -I$(TD_BASE)\TD\Include -I$(TD_BASE)\TD\Extensions\ExServices
 # The following works for Teigha 4.2.2
