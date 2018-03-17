@@ -366,11 +366,11 @@ int OGRCurvePolygon::checkRing( OGRCurve * poNewRing ) const
             return FALSE;
         }
 
-        if( EQUAL(poNewRing->getGeometryName(), "LINEARRING") )
-        {
-            CPLError(CE_Failure, CPLE_AppDefined, "Linearring not allowed.");
-            return FALSE;
-        }
+        //if( EQUAL(poNewRing->getGeometryName(), "LINEARRING") )
+        //{
+        //    CPLError(CE_Failure, CPLE_AppDefined, "Linearring not allowed.");
+        //    return FALSE;
+        //}
     }
 
     return TRUE;

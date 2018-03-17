@@ -681,6 +681,17 @@ bool IsContiguous( const std::vector<tPairFeatureHoleFlag>& oVectorSubElts,
                 AlmostEqual(oFirstPoint.getX(), oLastPoint.getX()) &&
                 AlmostEqual(oFirstPoint.getY(), oLastPoint.getY()) &&
                 AlmostEqual(oFirstPoint.getZ(), oLastPoint.getZ());
+        if (bIsClosed)
+        {
+          // Make sure that the last point and the first point of the closed geometry fit exactly
+          // otherwise we get into errors in the processing chain
+
+          // Get the last subelement
+          OGRGeometry* poGeom = oVectorSubElts[oVectorSubElts.size()-1].first->GetGeometryRef();
+          OGRSimpleCurve* poCurve = static_cast<OGRSimpleCurve*>(poGeom);
+          // Set the last point of the last subelement to be idetical to the first point of the geometry
+          poCurve->setPoint(poCurve->getNumPoints() - 1, &oFirstPoint);
+        }
     }
     return bIsContiguous;
 }

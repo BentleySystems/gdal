@@ -85,7 +85,7 @@ HTMLDIR = $(GDAL_HOME)\html
 # Set this to the installed directory containing python.  If you don't
 # have python just let it point to a directory that does not exist (as now).
 !IFNDEF PYDIR 
-PYDIR   =	"C:\Software\Python24"
+PYDIR   =	"C:\Python35"
 !ENDIF
 
 # Set the location of your SWIG installation
@@ -358,23 +358,23 @@ JPEG12_SUPPORTED = 1
 
 # DWG support using the Open Design Alliance Teigha Libraries
 
-#TD_BASE = C:\warmerda\pkg\td_vc9
-#TD_FLAGS = -D_TOOLKIT_IN_DLL_
+TD_BASE = d:\dev\OSS\gdal\Teigha_vc12_amd64dll
+TD_FLAGS = -D_TOOLKIT_IN_DLL_
 #TD_INCLUDE = -I$(TD_BASE)\TD\Include -I$(TD_BASE)\TD\Extensions\ExServices
 # The following works for Teigha 4.2.2
-#TD_INCLUDE = -I$(TD_BASE)\Core\Include -I$(TD_BASE)\Core\Extensions\ExServices -I$(TD_BASE)\Dgn\include -I$(TD_BASE)\Dgn\Extensions\ExServices
-#TD_LIBDIR = $(TD_BASE)\lib\vc14dll
-#TD_LIBS =  \
-#	$(TD_LIBDIR)/TD_Key.lib \
-#	$(TD_LIBDIR)/TD_ExamplesCommon.lib \
-#	$(TD_LIBDIR)/TD_Db.lib \
-#	$(TD_LIBDIR)/TD_DbRoot.lib \
-#	$(TD_LIBDIR)/TD_Root.lib \
-#	$(TD_LIBDIR)/TD_Ge.lib \
-#	$(TD_LIBDIR)/TD_Alloc.lib \
-#	$(TD_LIBDIR)/TG_Db.lib \
-#	$(TD_LIBDIR)/TG_ExamplesCommon.lib \
-#	advapi32.lib
+TD_INCLUDE = -I$(TD_BASE)\Core\Include -I$(TD_BASE)\Core\Extensions\ExServices -I$(TD_BASE)\Dgn\include -I$(TD_BASE)\Dgn\Extensions\ExServices
+TD_LIBDIR = $(TD_BASE)\lib\vc12_amd64dll
+TD_LIBS =  \
+	$(TD_LIBDIR)/TD_Key.lib \
+	$(TD_LIBDIR)/TD_ExamplesCommon.lib \
+	$(TD_LIBDIR)/TD_Db.lib \
+	$(TD_LIBDIR)/TD_DbRoot.lib \
+	$(TD_LIBDIR)/TD_Root.lib \
+	$(TD_LIBDIR)/TD_Ge.lib \
+	$(TD_LIBDIR)/TD_Alloc.lib \
+	$(TD_LIBDIR)/TG_Db.lib \
+	$(TD_LIBDIR)/TG_ExamplesCommon.lib \
+	advapi32.lib
 
 # Uncomment to build as a plugin
 #TD_PLUGIN = YES
@@ -539,14 +539,14 @@ GRIB_SETTING=yes
 
 # Add ORACLE support.
 # Uncomment the following line to enable OCI Oracle Spatial support.
-#ORACLE_HOME =	C:/Software/Oracle/Product/10.1.0/db_1
+ORACLE_HOME =	d:\dev\OSS\gdal\instantclient_12_1
 # Uncomment the following if you prefer to build OCI support as a plugin.
 #OCI_PLUGIN = YES
 
 !IFDEF ORACLE_HOME
-OCI_LIB =	$(ORACLE_HOME)\oci\lib\msvc\ociw32.lib \
-		$(ORACLE_HOME)\oci\lib\msvc\oci.lib
-OCI_INCLUDE =	-I$(ORACLE_HOME)\oci\include
+OCI_LIB =	$(ORACLE_HOME)\sdk\lib\msvc\ociw32.lib \
+		$(ORACLE_HOME)\sdk\lib\msvc\oci.lib
+OCI_INCLUDE =	-I$(ORACLE_HOME)\sdk\include
 !ENDIF
 
 #SDE_ENABLED = YES

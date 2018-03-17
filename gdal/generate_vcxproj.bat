@@ -277,7 +277,7 @@ echo   ^<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|%_win
 echo     ^<NMakeBuildCommandLine^>nmake -f makefile.vc MSVC_VER=%_clver_% %_nmake_opt_win64_% ^</NMakeBuildCommandLine^>            >> %_gdalproj_%
 echo     ^<NMakeOutput^>^</NMakeOutput^>                                                    >> %_gdalproj_%
 echo     ^<NMakeCleanCommandLine^>nmake -f makefile.vc MSVC_VER=%_clver_% %_nmake_opt_win64_% clean^</NMakeCleanCommandLine^>      >> %_gdalproj_%
-echo     ^<NMakeReBuildCommandLine^>nmake -f makefile.vc MSVC_VER=%_clver_% %_nmake_opt_win64_% clean ^&amp;^&amp; nmake -f makefile.vc MSVC_VER=%_clver_%^</NMakeReBuildCommandLine^>  >> %_gdalproj_%
+echo     ^<NMakeReBuildCommandLine^>nmake -f makefile.vc MSVC_VER=%_clver_% %_nmake_opt_win64_% clean ^&amp;^&amp; nmake -f makefile.vc MSVC_VER=%_clver_% %_nmake_opt_win64_% ^</NMakeReBuildCommandLine^>  >> %_gdalproj_%
 echo     ^<NMakePreprocessorDefinitions^>%_winver_%;NDEBUG;$(NMakePreprocessorDefinitions)^</NMakePreprocessorDefinitions^>   >> %_gdalproj_%
 echo     ^<LibraryPath^>$(VC_LibraryPath_%_buildplatf_%);$(WindowsSDK_LibraryPath_%_buildplatf_%);$(VC_SourcePath);^</LibraryPath^>   >> %_gdalproj_%
 echo   ^</PropertyGroup^>                                                                   >> %_gdalproj_%

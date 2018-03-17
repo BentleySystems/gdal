@@ -3,3 +3,7 @@
 *.obj
 *.so
 *~
+*.suo
+instantclient_12_1/
+Teigha_vc12_amd64dll/
+dlls/
