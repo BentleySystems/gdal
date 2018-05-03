@@ -539,7 +539,7 @@ GRIB_SETTING=yes
 
 # Add ORACLE support.
 # Uncomment the following line to enable OCI Oracle Spatial support.
-ORACLE_HOME =	d:\dev\OSS\gdal\instantclient_12_1
+#ORACLE_HOME =	d:\dev\OSS\gdal\instantclient_12_1
 # Uncomment the following if you prefer to build OCI support as a plugin.
 #OCI_PLUGIN = YES
 
