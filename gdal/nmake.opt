@@ -358,23 +358,23 @@ JPEG12_SUPPORTED = 1
 
 # DWG support using the Open Design Alliance Teigha Libraries
 
-TD_BASE = $(GDAL_ROOT)\..\Teigha_vc12_amd64dll
-TD_FLAGS = -D_TOOLKIT_IN_DLL_
+#TD_BASE = $(GDAL_ROOT)\..\Teigha_vc12_amd64dll
+#TD_FLAGS = -D_TOOLKIT_IN_DLL_
 #TD_INCLUDE = -I$(TD_BASE)\TD\Include -I$(TD_BASE)\TD\Extensions\ExServices
 # The following works for Teigha 4.2.2
-TD_INCLUDE = -I$(TD_BASE)\Core\Include -I$(TD_BASE)\Core\Extensions\ExServices -I$(TD_BASE)\Dgn\include -I$(TD_BASE)\Dgn\Extensions\ExServices
-TD_LIBDIR = $(TD_BASE)\lib\vc12_amd64dll
-TD_LIBS =  \
-	$(TD_LIBDIR)/TD_Key.lib \
-	$(TD_LIBDIR)/TD_ExamplesCommon.lib \
-	$(TD_LIBDIR)/TD_Db.lib \
-	$(TD_LIBDIR)/TD_DbRoot.lib \
-	$(TD_LIBDIR)/TD_Root.lib \
-	$(TD_LIBDIR)/TD_Ge.lib \
-	$(TD_LIBDIR)/TD_Alloc.lib \
-	$(TD_LIBDIR)/TG_Db.lib \
-	$(TD_LIBDIR)/TG_ExamplesCommon.lib \
-	advapi32.lib
+#TD_INCLUDE = -I$(TD_BASE)\Core\Include -I$(TD_BASE)\Core\Extensions\ExServices -I$(TD_BASE)\Dgn\include -I$(TD_BASE)\Dgn\Extensions\ExServices
+#TD_LIBDIR = $(TD_BASE)\lib\vc12_amd64dll
+#TD_LIBS =  \
+#	$(TD_LIBDIR)/TD_Key.lib \
+#	$(TD_LIBDIR)/TD_ExamplesCommon.lib \
+#	$(TD_LIBDIR)/TD_Db.lib \
+#	$(TD_LIBDIR)/TD_DbRoot.lib \
+#	$(TD_LIBDIR)/TD_Root.lib \
+#	$(TD_LIBDIR)/TD_Ge.lib \
+#	$(TD_LIBDIR)/TD_Alloc.lib \
+#	$(TD_LIBDIR)/TG_Db.lib \
+#	$(TD_LIBDIR)/TG_ExamplesCommon.lib \
+#	advapi32.lib
 
 # Uncomment to build as a plugin
 #TD_PLUGIN = YES
